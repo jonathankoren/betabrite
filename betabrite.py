@@ -407,7 +407,7 @@ def write_file(animations, file=FILE_PRIORITY):
     return payload
 
 def animation(msg, mode=MODE_AUTO, color=TEXT_COLOR_AUTO, position=TEXT_POS_MIDDLE):
-    return  SOM + position + mode + color + transcode(msg)
+    return SOM + position + mode + color + transcode(msg)
 
 def soft_reset():
     return COMMAND_WRITE_SPECIAL + b"\x2c"
@@ -557,12 +557,4 @@ if __name__ == '__main__':
     parser.add_argument("--port", help="Port to write to", default='/dev/cu.usbserial-A4007B5o')
     parser.add_argument("messages", help="Formatted messages to send", nargs='+')
     args = parser.parse_args()
-
-    animations = parse_cmdline_messages(args.messages)
-
-    #animations = [ animation('', MODE_BALLOONS),
-    #               animation(sys.argv[1], MODE_SPRAY, TEXT_COLOR_YELLOW),
-    #               animation(sys.argv[2], MODE_CMPRSROT, TEXT_COLOR_RED),
-    #               animation('', MODE_FISH),
-    #               animation('extra', MODE_STARBURST, TEXT_COLOR_RAINBOW1) ]
-    transmit(args.port, write_file(animations))
+    transmit(args.port, write_file(parse_cmdline_messages(args.messages)))
