@@ -464,7 +464,7 @@ def parse_cmdline_messages(tokens):
             elif tok == '+mix':
                 color = TEXT_COLOR_MIX
             elif tok == '+autocolor':
-                color = TEXT_COLOR_auto
+                color = TEXT_COLOR_AUTO
             elif tok == '+rotate':
                 mode = MODE_ROTATE
             elif tok == '+hold':
