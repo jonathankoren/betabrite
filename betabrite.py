@@ -558,3 +558,4 @@ if __name__ == '__main__':
     parser.add_argument("messages", help="Formatted messages to send", nargs='+')
     args = parser.parse_args()
     transmit(args.port, write_file(parse_cmdline_messages(args.messages)))
+    #transmit(args.port, write_file([SOM + TEXT_POS_MIDDLE + MODE_ROTATE + TEXT_COLOR_RED + transcode('red ') + TEXT_COLOR_GREEN + transcode('green ') + TEXT_COLOR_YELLOW + transcode('yellow')]))
