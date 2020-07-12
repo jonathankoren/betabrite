@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-import argparse
+import time
+import serial
 
 ################################################################################
 
@@ -550,9 +551,7 @@ def parse_cmdline_messages(tokens):
     return animations
 
 if __name__ == '__main__':
-    import sys
-    import time
-    import serial
+    import argparse
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", help="Port to write to", default='/dev/cu.usbserial-A4007B5o')
