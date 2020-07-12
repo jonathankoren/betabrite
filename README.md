@@ -6,7 +6,8 @@ https://www.adaptivedisplays.com/resources/documentation-and-manuals/support-doc
 
 # Usage
 ## Programmatically
-```from betabrite import *
+```
+from betabrite import *
 
 transmit("/dev/serial", write_file([animation("example text")]))
 ```
