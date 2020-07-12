@@ -13,4 +13,4 @@ transmit("/dev/serial", write_file([animation("example text")]))
 ```
 
 ## Command Line
-``./betabrite +automode +autocolor example text`
+`./betabrite +automode +autocolor example text`
